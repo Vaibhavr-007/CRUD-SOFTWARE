@@ -1,0 +1,51 @@
+<% layout('layout/boilerplate') %> 
+<h1 class="text-center">NEW CAMPGROUND</h1>
+<div class="row">
+    <div class="col-6 offset-3">
+        <form action="/campground" method="POST"  class="validatedform" novalidate>
+            <div class="mb-3">
+                <label class="form-label"for="title">TITLE</label>
+                <input class="form-control" type="text" id="title" name="campground[title]" required>
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="title">LOCATION</label>
+                <input class="form-control" type="text" id="location" name="campground[location]" required>
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="image">image url</label>
+                <input class="form-control" type="text" id="image" name="campground[image]" required>
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>  
+            <div class="mb-3">
+                <label class="form-label" for="price">price</label>
+                <div class="input-group">
+                    <div class="input-group-text">$</div>
+                    <input type="text" class="form-control" id="price-label" name="campground[price]" placeholder="0.00" required>
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>  
+            </div>        
+            <div class="mb-3">
+                <label class="form-label" for="description">description</label>
+                <textarea class="form-control" type="text" id="description" name="campground[description]" required></textarea>
+                <div class="valid-feedback">
+                    looks good!
+                </div>
+            </div>
+            <div>
+                <button class="btn-success">ADD CAMPGROUND</button>
+            </div>
+        </form>
+        <br>
+        <a href="/campground">ALL CAMPGROUNDS</a>
+    </div>
+</div>
